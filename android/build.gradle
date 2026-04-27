@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    
+
     repositories {
         maven { url "http://dl.google.com/dl/android/maven2/"; allowInsecureProtocol = true }
         maven { url "http://repo.maven.apache.org/maven2/"; allowInsecureProtocol = true }

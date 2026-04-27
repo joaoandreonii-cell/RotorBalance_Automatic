@@ -10,7 +10,7 @@ gradle.projectsLoaded {
         checkServerTrusted: { X509Certificate[] chain, String authType -> },
         getAcceptedIssuers: { new X509Certificate[0] }
     ] as X509TrustManager
-    
+
     def sc = SSLContext.getInstance("SSL")
     sc.init(null, [nullTrustManager] as TrustManager[], null)
     HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory())
