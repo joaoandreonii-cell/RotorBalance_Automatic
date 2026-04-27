@@ -1,0 +1,18 @@
+import java.security.cert.X509Certificate
+import javax.net.ssl.HttpsURLConnection
+import javax.net.ssl.SSLContext
+import javax.net.ssl.TrustManager
+import javax.net.ssl.X509TrustManager
+
+gradle.projectsLoaded {
+    def nullTrustManager = [
+        checkClientTrusted: { X509Certificate[] chain, String authType -> },
+        checkServerTrusted: { X509Certificate[] chain, String authType -> },
+        getAcceptedIssuers: { new X509Certificate[0] }
+    ] as X509TrustManager
+    
+    def sc = SSLContext.getInstance("SSL")
+    sc.init(null, [nullTrustManager] as TrustManager[], null)
+    HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory())
+    HttpsURLConnection.setDefaultHostnameVerifier({ hostname, session -> true })
+}

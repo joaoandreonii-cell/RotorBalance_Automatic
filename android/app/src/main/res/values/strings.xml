@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RotorBalance Automatic</string>
+    <string name="title_activity_main">RotorBalance Automatic</string>
+    <string name="package_name">com.rba.rotorbalance</string>
+    <string name="custom_url_scheme">com.rba.rotorbalance</string>
+</resources>
