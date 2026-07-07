@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Save, Eraser, PenLine, Wand2 } from "lucide-react";
+import { Save, Eraser, PenLine, Wand2, FileDown } from "lucide-react";
 import PageHeader from "../components/layout/PageHeader.jsx";
 import Card from "../components/ui/Card.jsx";
 import Button from "../components/ui/Button.jsx";
@@ -16,6 +16,7 @@ import VerificationCard from "../components/balance/VerificationCard.jsx";
 import PolarDiagram from "../components/balance/PolarDiagram.jsx";
 import WizardMode from "../components/balance/WizardMode.jsx";
 import { parseVal, computeResult, splitBetweenBlades, reductionPercent, qualityStatus } from "../utils/math.js";
+import { generatePdfReport } from "../utils/pdf.js";
 import { repository } from "../data/repository.js";
 
 export const EMPTY_FORM = {
@@ -118,6 +119,25 @@ export default function BalancePage() {
         toast("Sessão salva com sucesso!");
     };
 
+    const handlePdf = async () => {
+        if (!result) return;
+        try {
+            let number = reportNumber;
+            if (!number) {
+                number = repository.nextReportNumber();
+                setReportNumber(number);
+            }
+            const saved = repository.sessions.save({ ...buildSession(), report: { number } });
+            setSessionId(saved.id);
+            const svgEl = printRef.current?.querySelector("svg");
+            await generatePdfReport({ session: saved, settings: repository.settings.get(), diagramSvgElement: svgEl });
+            toast("PDF exportado!");
+        } catch (err) {
+            console.error(err);
+            toast("Erro ao gerar PDF", "error");
+        }
+    };
+
     const handleClear = () => {
         setForm({ ...EMPTY_FORM, technician: repository.settings.get().technician });
         setSessionId(null);
@@ -150,6 +170,11 @@ export default function BalancePage() {
                     form={form} patch={patch} patchMeas={patchMeas} patchVerif={patchVerif}
                     pv={pv} result={result} split={split} reduction={reduction} status={status}
                     onSave={handleSave} saveDisabled={!result}
+                    extraActions={
+                        <Button icon={FileDown} disabled={!result} onClick={handlePdf}>
+                            Exportar PDF
+                        </Button>
+                    }
                 />
             )}
 
@@ -187,6 +212,9 @@ export default function BalancePage() {
                             <div className="flex flex-wrap gap-2 pt-1">
                                 <Button variant="primary" icon={Save} disabled={!result} onClick={handleSave}>
                                     Salvar
+                                </Button>
+                                <Button icon={FileDown} disabled={!result} onClick={handlePdf}>
+                                    Exportar PDF
                                 </Button>
                                 <Button icon={Eraser} onClick={() => (dirty ? setConfirmClear(true) : handleClear())}>
                                     Limpar
