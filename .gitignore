@@ -13,3 +13,10 @@ Thumbs.db
 # editor
 .vscode/
 *.swp
+
+# playwright/test artifacts
+.playwright-mcp/
+shell-dark.png
+
+# reference material
+*.pptx
