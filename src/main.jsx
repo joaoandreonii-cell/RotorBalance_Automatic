@@ -1,14 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
-import { getTheme, setTheme } from "./utils/storage.js";
+import { migrateV1Sessions } from "./data/migrations.js";
+import { ThemeProvider } from "./theme/ThemeContext.jsx";
+import { ToastProvider } from "./components/ui/Toast.jsx";
 
-// Initialize theme
-setTheme(getTheme());
+migrateV1Sessions();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <App />
+        <BrowserRouter>
+            <ThemeProvider>
+                <ToastProvider>
+                    <App />
+                </ToastProvider>
+            </ThemeProvider>
+        </BrowserRouter>
     </React.StrictMode>
 );
