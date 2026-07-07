@@ -1,9 +1,10 @@
 import { useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Save, Eraser } from "lucide-react";
+import { Save, Eraser, PenLine, Wand2 } from "lucide-react";
 import PageHeader from "../components/layout/PageHeader.jsx";
 import Card from "../components/ui/Card.jsx";
 import Button from "../components/ui/Button.jsx";
+import SegmentedControl from "../components/ui/SegmentedControl.jsx";
 import ConfirmDialog from "../components/ui/ConfirmDialog.jsx";
 import { useToast } from "../components/ui/Toast.jsx";
 import IdentificationForm from "../components/balance/IdentificationForm.jsx";
@@ -13,6 +14,7 @@ import ResultPanel from "../components/balance/ResultPanel.jsx";
 import BladeSplitCard from "../components/balance/BladeSplitCard.jsx";
 import VerificationCard from "../components/balance/VerificationCard.jsx";
 import PolarDiagram from "../components/balance/PolarDiagram.jsx";
+import WizardMode from "../components/balance/WizardMode.jsx";
 import { parseVal, computeResult, splitBetweenBlades, reductionPercent, qualityStatus } from "../utils/math.js";
 import { repository } from "../data/repository.js";
 
@@ -62,6 +64,7 @@ export default function BalancePage() {
     const [sessionId, setSessionId] = useState(seed && !isDuplicate ? seed.id : null);
     const [reportNumber, setReportNumber] = useState(seed && !isDuplicate ? seed.report?.number ?? null : null);
     const [confirmClear, setConfirmClear] = useState(false);
+    const [mode, setMode] = useState("direct");
     const diagramRef = useRef(null);
     const printRef = useRef(null);
 
@@ -131,6 +134,26 @@ export default function BalancePage() {
                 subtitle="Método dos três pontos — 4 medições, posições 0° · 120° · 240°"
             />
 
+            <div className="mb-5">
+                <SegmentedControl
+                    value={mode}
+                    onChange={setMode}
+                    options={[
+                        { value: "direct", label: "Modo direto", icon: PenLine },
+                        { value: "wizard", label: "Modo guiado", icon: Wand2 },
+                    ]}
+                />
+            </div>
+
+            {mode === "wizard" && (
+                <WizardMode
+                    form={form} patch={patch} patchMeas={patchMeas} patchVerif={patchVerif}
+                    pv={pv} result={result} split={split} reduction={reduction} status={status}
+                    onSave={handleSave} saveDisabled={!result}
+                />
+            )}
+
+            {mode === "direct" && (
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_420px] gap-5 items-start">
                 <div className="space-y-5">
                     <Card title="Identificação" subtitle="Cliente e responsável (aparece no relatório)">
@@ -173,6 +196,7 @@ export default function BalancePage() {
                     </Card>
                 </div>
             </div>
+            )}
 
             {/* Diagrama oculto em paleta de impressão (usado pelo relatório PDF) */}
             <div ref={printRef} className="hidden" aria-hidden="true">
