@@ -1,0 +1,79 @@
+- generic [ref=f14e3]:
+  - complementary [ref=f14e4]:
+    - generic [ref=f14e5]:
+      - img [ref=f14e7]
+      - generic [ref=f14e12]:
+        - paragraph [ref=f14e13]: RotorBalance
+        - paragraph [ref=f14e14]: AUTOMATIC
+    - navigation [ref=f14e15]:
+      - link "Dashboard" [ref=f14e16] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=f14e17]
+        - text: Dashboard
+      - link "Balanceamento" [ref=f14e22] [cursor=pointer]:
+        - /url: /balanceamento
+        - img [ref=f14e23]
+        - text: Balanceamento
+      - link "Histórico" [ref=f14e27] [cursor=pointer]:
+        - /url: /historico
+        - img [ref=f14e28]
+        - text: Histórico
+      - link "Configurações" [ref=f14e32] [cursor=pointer]:
+        - /url: /configuracoes
+        - img [ref=f14e33]
+        - text: Configurações
+    - generic [ref=f14e36]:
+      - generic [ref=f14e37]: RBA v2.0 · 3 pontos
+      - button "Modo claro" [ref=f14e38] [cursor=pointer]:
+        - img [ref=f14e39]
+  - main [ref=f14e46]:
+    - generic [ref=f14e47]:
+      - generic [ref=f14e48]:
+        - heading "Dashboard" [level=1] [ref=f14e49]
+        - paragraph [ref=f14e50]: Visão geral dos balanceamentos
+      - button "Novo balanceamento" [ref=f14e52] [cursor=pointer]:
+        - img [ref=f14e53]
+        - text: Novo balanceamento
+    - generic [ref=f14e54]:
+      - generic [ref=f14e55]:
+        - generic [ref=f14e56]:
+          - paragraph [ref=f14e57]: Balanceamentos no mês
+          - img [ref=f14e59]
+        - paragraph [ref=f14e63]: "2"
+      - generic [ref=f14e64]:
+        - generic [ref=f14e65]:
+          - paragraph [ref=f14e66]: Redução média de vibração
+          - img [ref=f14e68]
+        - paragraph [ref=f14e71]: 90%
+        - paragraph [ref=f14e72]: sessões verificadas
+      - generic [ref=f14e73]:
+        - generic [ref=f14e74]:
+          - paragraph [ref=f14e75]: Máquinas atendidas
+          - img [ref=f14e77]
+        - paragraph [ref=f14e79]: "1"
+      - generic [ref=f14e80]:
+        - generic [ref=f14e81]:
+          - paragraph [ref=f14e82]: Total de sessões
+          - img [ref=f14e84]
+        - paragraph [ref=f14e87]: "2"
+    - generic [ref=f14e88]:
+      - generic [ref=f14e89]:
+        - generic [ref=f14e90]:
+          - heading "Sessões recentes" [level=2] [ref=f14e91]
+          - paragraph [ref=f14e92]: Últimos balanceamentos salvos
+        - button "Ver todas" [ref=f14e93] [cursor=pointer]:
+          - text: Ver todas
+          - img [ref=f14e94]
+      - list [ref=f14e97]:
+        - listitem [ref=f14e98]:
+          - generic [ref=f14e99]:
+            - paragraph [ref=f14e100]: Exaustor principal
+            - paragraph [ref=f14e101]: 07/07/2026 08:46
+          - paragraph [ref=f14e102]: 4,68 g @ 90,3°
+          - generic [ref=f14e103]: Excelente
+        - listitem [ref=f14e104]:
+          - generic [ref=f14e105]:
+            - paragraph [ref=f14e106]: Exaustor principal
+            - paragraph [ref=f14e107]: 07/07/2026 08:29
+          - paragraph [ref=f14e108]: 4,68 g @ 90,3°
+          - generic [ref=f14e109]: Excelente

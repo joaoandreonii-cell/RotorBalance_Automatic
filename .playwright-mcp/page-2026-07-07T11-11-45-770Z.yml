@@ -1,0 +1,32 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: RotorBalance
+        - paragraph [ref=e14]: AUTOMATIC
+    - navigation [ref=e15]:
+      - link "Dashboard" [ref=e16] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e17]
+        - text: Dashboard
+      - link "Balanceamento" [ref=e22] [cursor=pointer]:
+        - /url: /balanceamento
+        - img [ref=e23]
+        - text: Balanceamento
+      - link "Histórico" [ref=e27] [cursor=pointer]:
+        - /url: /historico
+        - img [ref=e28]
+        - text: Histórico
+      - link "Configurações" [ref=e32] [cursor=pointer]:
+        - /url: /configuracoes
+        - img [ref=e33]
+        - text: Configurações
+    - generic [ref=e36]:
+      - generic [ref=e37]: RBA v2.0 · 3 pontos
+      - button "Modo claro" [active] [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+  - main [ref=e42]:
+    - generic [ref=e44]:
+      - heading "Dashboard" [level=1] [ref=e45]
+      - paragraph [ref=e46]: Visão geral dos balanceamentos

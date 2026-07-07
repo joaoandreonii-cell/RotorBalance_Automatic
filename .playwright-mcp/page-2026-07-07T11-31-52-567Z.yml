@@ -1,0 +1,198 @@
+- generic [ref=f8e3]:
+  - complementary [ref=f8e4]:
+    - generic [ref=f8e5]:
+      - img [ref=f8e7]
+      - generic [ref=f8e12]:
+        - paragraph [ref=f8e13]: RotorBalance
+        - paragraph [ref=f8e14]: AUTOMATIC
+    - navigation [ref=f8e15]:
+      - link "Dashboard" [ref=f8e16] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=f8e17]
+        - text: Dashboard
+      - link "Balanceamento" [ref=f8e22] [cursor=pointer]:
+        - /url: /balanceamento
+        - img [ref=f8e23]
+        - text: Balanceamento
+      - link "Histórico" [ref=f8e27] [cursor=pointer]:
+        - /url: /historico
+        - img [ref=f8e28]
+        - text: Histórico
+      - link "Configurações" [ref=f8e32] [cursor=pointer]:
+        - /url: /configuracoes
+        - img [ref=f8e33]
+        - text: Configurações
+    - generic [ref=f8e36]:
+      - generic [ref=f8e37]: RBA v2.0 · 3 pontos
+      - button "Modo claro" [ref=f8e38] [cursor=pointer]:
+        - img [ref=f8e39]
+  - main [ref=f8e46]:
+    - generic [ref=f8e48]:
+      - heading "Balanceamento" [level=1] [ref=f8e49]
+      - paragraph [ref=f8e50]: Método dos três pontos — 4 medições, posições 0° · 120° · 240°
+    - generic [ref=f8e52]:
+      - button "Modo direto" [ref=f8e53] [cursor=pointer]:
+        - img [ref=f8e54]
+        - text: Modo direto
+      - button "Modo guiado" [ref=f8e56] [cursor=pointer]:
+        - img [ref=f8e57]
+        - text: Modo guiado
+    - generic [ref=f8e60]:
+      - generic [ref=f8e61]:
+        - generic [ref=f8e62]:
+          - generic [ref=f8e64]:
+            - heading "Identificação" [level=2] [ref=f8e65]
+            - paragraph [ref=f8e66]: Cliente e responsável (aparece no relatório)
+          - generic [ref=f8e68]:
+            - generic [ref=f8e69]:
+              - generic [ref=f8e70]: Cliente / Empresa
+              - textbox "Cliente / Empresa" [ref=f8e72]:
+                - /placeholder: "Ex.: Metalúrgica Alfa"
+            - generic [ref=f8e73]:
+              - generic [ref=f8e74]: Contato
+              - textbox "Contato" [ref=f8e76]:
+                - /placeholder: E-mail ou telefone
+            - generic [ref=f8e77]:
+              - generic [ref=f8e78]: Técnico responsável
+              - textbox "Técnico responsável" [ref=f8e80]:
+                - /placeholder: Seu nome
+            - generic [ref=f8e81]:
+              - generic [ref=f8e82]: Notas
+              - textbox "Notas" [ref=f8e84]:
+                - /placeholder: Observações (opcional)
+        - generic [ref=f8e85]:
+          - generic [ref=f8e87]:
+            - heading "Máquina" [level=2] [ref=f8e88]
+            - paragraph [ref=f8e89]: Dados do equipamento (opcional)
+          - generic [ref=f8e91]:
+            - generic [ref=f8e92]:
+              - generic [ref=f8e93]: TAG
+              - textbox "TAG" [ref=f8e95]:
+                - /placeholder: VT-001
+            - generic [ref=f8e96]:
+              - generic [ref=f8e97]: Equipamento
+              - textbox "Equipamento" [ref=f8e99]:
+                - /placeholder: Exaustor
+            - generic [ref=f8e100]:
+              - generic [ref=f8e101]: Local
+              - textbox "Local" [ref=f8e103]:
+                - /placeholder: Setor / linha
+            - generic [ref=f8e104]:
+              - generic [ref=f8e105]: Rotação
+              - generic [ref=f8e106]:
+                - textbox "Rotação RPM" [ref=f8e107]:
+                  - /placeholder: "1750"
+                - generic: RPM
+            - generic [ref=f8e108]:
+              - generic [ref=f8e109]: Raio de fixação
+              - generic [ref=f8e110]:
+                - textbox "Raio de fixação mm" [ref=f8e111]:
+                  - /placeholder: "150"
+                - generic: mm
+            - generic [ref=f8e112]:
+              - generic [ref=f8e113]:
+                - text: Nº de pás
+                - generic [ref=f8e114]: · p/ divisão
+              - textbox "Nº de pás · p/ divisão" [ref=f8e116]:
+                - /placeholder: "6"
+            - generic [ref=f8e117]:
+              - generic [ref=f8e118]:
+                - text: Pá 1 em
+                - generic [ref=f8e119]: · offset angular
+              - generic [ref=f8e120]:
+                - textbox "Pá 1 em · offset angular °" [ref=f8e121]:
+                  - /placeholder: "0"
+                  - text: "0"
+                - generic: °
+        - generic [ref=f8e122]:
+          - generic [ref=f8e124]:
+            - heading "Medições" [level=2] [ref=f8e125]
+            - paragraph [ref=f8e126]: Vibrações medidas nas 4 rodadas
+          - generic [ref=f8e128]:
+            - generic [ref=f8e129]:
+              - generic [ref=f8e130]: Unidade de vibração
+              - combobox "Unidade de vibração" [ref=f8e131] [cursor=pointer]:
+                - option "mm/s" [selected]
+                - option "µm"
+                - option "in/s"
+                - option "g"
+            - generic [ref=f8e132]:
+              - generic [ref=f8e133]: V₀
+              - generic [ref=f8e134]:
+                - generic [ref=f8e135]:
+                  - text: Vibração original
+                  - generic [ref=f8e136]: · sem massa de teste
+                - generic [ref=f8e137]:
+                  - textbox "Vibração original · sem massa de teste mm/s" [ref=f8e138]:
+                    - /placeholder: 0,00
+                  - generic: mm/s
+            - generic [ref=f8e139]:
+              - generic [ref=f8e140]: V₁
+              - generic [ref=f8e141]:
+                - generic [ref=f8e142]:
+                  - text: Massa em 0°
+                  - generic [ref=f8e143]: · posição 1
+                - generic [ref=f8e144]:
+                  - textbox "Massa em 0° · posição 1 mm/s" [ref=f8e145]:
+                    - /placeholder: 0,00
+                  - generic: mm/s
+            - generic [ref=f8e146]:
+              - generic [ref=f8e147]: V₂
+              - generic [ref=f8e148]:
+                - generic [ref=f8e149]:
+                  - text: Massa em 120°
+                  - generic [ref=f8e150]: · posição 2
+                - generic [ref=f8e151]:
+                  - textbox "Massa em 120° · posição 2 mm/s" [ref=f8e152]:
+                    - /placeholder: 0,00
+                  - generic: mm/s
+            - generic [ref=f8e153]:
+              - generic [ref=f8e154]: V₃
+              - generic [ref=f8e155]:
+                - generic [ref=f8e156]:
+                  - text: Massa em 240°
+                  - generic [ref=f8e157]: · posição 3
+                - generic [ref=f8e158]:
+                  - textbox "Massa em 240° · posição 3 mm/s" [ref=f8e159]:
+                    - /placeholder: 0,00
+                  - generic: mm/s
+            - generic [ref=f8e160]:
+              - generic [ref=f8e161]: Mₜ
+              - generic [ref=f8e162]:
+                - generic [ref=f8e163]:
+                  - text: Massa de teste
+                  - generic [ref=f8e164]: · gramas
+                - generic [ref=f8e165]:
+                  - textbox "Massa de teste · gramas g" [ref=f8e166]:
+                    - /placeholder: 0,00
+                  - generic: g
+      - generic [ref=f8e167]:
+        - generic [ref=f8e168]:
+          - generic [ref=f8e170]:
+            - heading "Diagrama polar" [level=2] [ref=f8e171]
+            - paragraph [ref=f8e172]: Interseção dos arcos → ponto P
+          - img "Diagrama polar" [ref=f8e175]:
+            - generic [ref=f8e185]: 0°
+            - generic [ref=f8e186]: 30°
+            - generic [ref=f8e187]: 60°
+            - generic [ref=f8e188]: 90°
+            - generic [ref=f8e189]: 120°
+            - generic [ref=f8e190]: 150°
+            - generic [ref=f8e191]: 180°
+            - generic [ref=f8e192]: 210°
+            - generic [ref=f8e193]: 240°
+            - generic [ref=f8e194]: 270°
+            - generic [ref=f8e195]: 300°
+            - generic [ref=f8e196]: 330°
+            - generic [ref=f8e199]: Insira os valores para visualizar
+        - generic [ref=f8e200]:
+          - heading "Resultado" [level=2] [ref=f8e203]
+          - generic [ref=f8e205]:
+            - paragraph [ref=f8e206]: Preencha as quatro medições e a massa de teste para calcular a massa de correção.
+            - generic [ref=f8e207]:
+              - button "Salvar" [disabled]:
+                - img
+                - text: Salvar
+              - button "Limpar" [ref=f8e208] [cursor=pointer]:
+                - img [ref=f8e209]
+                - text: Limpar

@@ -1,0 +1,120 @@
+- generic [ref=f8e3]:
+  - complementary [ref=f8e4]:
+    - generic [ref=f8e5]:
+      - img [ref=f8e7]
+      - generic [ref=f8e12]:
+        - paragraph [ref=f8e13]: RotorBalance
+        - paragraph [ref=f8e14]: AUTOMATIC
+    - navigation [ref=f8e15]:
+      - link "Dashboard" [ref=f8e16] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=f8e17]
+        - text: Dashboard
+      - link "Balanceamento" [ref=f8e22] [cursor=pointer]:
+        - /url: /balanceamento
+        - img [ref=f8e23]
+        - text: Balanceamento
+      - link "Histórico" [ref=f8e27] [cursor=pointer]:
+        - /url: /historico
+        - img [ref=f8e28]
+        - text: Histórico
+      - link "Configurações" [ref=f8e32] [cursor=pointer]:
+        - /url: /configuracoes
+        - img [ref=f8e33]
+        - text: Configurações
+    - generic [ref=f8e36]:
+      - generic [ref=f8e37]: RBA v2.0 · 3 pontos
+      - button "Modo claro" [ref=f8e38] [cursor=pointer]:
+        - img [ref=f8e39]
+  - main [ref=f8e46]:
+    - generic [ref=f8e48]:
+      - heading "Balanceamento" [level=1] [ref=f8e49]
+      - paragraph [ref=f8e50]: Método dos três pontos — 4 medições, posições 0° · 120° · 240°
+    - generic [ref=f8e52]:
+      - button "Modo direto" [ref=f8e53] [cursor=pointer]:
+        - img [ref=f8e54]
+        - text: Modo direto
+      - button "Modo guiado" [ref=f8e56] [cursor=pointer]:
+        - img [ref=f8e57]
+        - text: Modo guiado
+    - generic [ref=f8e212]:
+      - list [ref=f8e213]:
+        - listitem [ref=f8e214]:
+          - button "Identificação" [ref=f8e299] [cursor=pointer]:
+            - img [ref=f8e300]
+            - text: Identificação
+        - listitem [ref=f8e217]:
+          - button "V₀ original" [ref=f8e336] [cursor=pointer]:
+            - img [ref=f8e337]
+            - text: V₀ original
+        - listitem [ref=f8e221]:
+          - button "V₁ · 0°" [ref=f8e349] [cursor=pointer]:
+            - img [ref=f8e350]
+            - text: V₁ · 0°
+        - listitem [ref=f8e225]:
+          - button "V₂ · 120°" [ref=f8e357] [cursor=pointer]:
+            - img [ref=f8e358]
+            - text: V₂ · 120°
+        - listitem [ref=f8e229]:
+          - button "V₃ · 240°" [ref=f8e365] [cursor=pointer]:
+            - img [ref=f8e366]
+            - text: V₃ · 240°
+        - listitem [ref=f8e233]:
+          - button "6 Resultado" [ref=f8e235]:
+            - generic [ref=f8e236]: "6"
+            - text: Resultado
+      - generic [ref=f8e368]:
+        - heading "Resultado" [level=2] [ref=f8e371]
+        - generic [ref=f8e373]:
+          - img "Diagrama polar" [ref=f8e375]:
+            - generic [ref=f8e381]: "4.0"
+            - generic [ref=f8e386]: "8.0"
+            - generic [ref=f8e391]: "12"
+            - generic [ref=f8e396]: "16"
+            - generic [ref=f8e401]: "20"
+            - generic [ref=f8e406]: "24"
+            - generic [ref=f8e415]: 0°
+            - generic [ref=f8e416]: 30°
+            - generic [ref=f8e417]: 60°
+            - generic [ref=f8e418]: 90°
+            - generic [ref=f8e419]: 120°
+            - generic [ref=f8e420]: 150°
+            - generic [ref=f8e421]: 180°
+            - generic [ref=f8e422]: 210°
+            - generic [ref=f8e423]: 240°
+            - generic [ref=f8e424]: 270°
+            - generic [ref=f8e425]: 300°
+            - generic [ref=f8e426]: 330°
+            - generic [ref=f8e445]: 1·0°
+            - generic [ref=f8e449]: 2·120°
+            - generic [ref=f8e453]: 3·240°
+            - generic [ref=f8e458]: P
+          - generic [ref=f8e459]:
+            - generic [ref=f8e460]:
+              - generic [ref=f8e461]:
+                - paragraph [ref=f8e462]: Distância OP
+                - paragraph [ref=f8e463]: 7,690
+              - generic [ref=f8e464]:
+                - paragraph [ref=f8e465]: Ângulo
+                - paragraph [ref=f8e466]: 90,3°
+            - generic [ref=f8e467]:
+              - paragraph [ref=f8e468]: Massa de correção
+              - paragraph [ref=f8e469]: 4,68 g
+              - paragraph [ref=f8e470]:
+                - text: posicionar em
+                - generic [ref=f8e471]: 90,3°
+            - paragraph [ref=f8e472]: Mc = Mₜ × V₀ / OP = 4,5 × 8 / 7,690 = 4,68 g
+          - generic [ref=f8e473]:
+            - paragraph [ref=f8e474]: Verificação pós-balanceamento
+            - generic [ref=f8e475]:
+              - generic [ref=f8e476]:
+                - text: Vibração final
+                - generic [ref=f8e477]: · após instalar a massa de correção
+              - generic [ref=f8e478]:
+                - textbox "Vibração final · após instalar a massa de correção mm/s" [ref=f8e479]:
+                  - /placeholder: 0,00
+                - generic: mm/s
+          - button "Salvar" [ref=f8e481] [cursor=pointer]
+      - button "Voltar" [ref=f8e333] [cursor=pointer]:
+        - img [ref=f8e334]
+        - text: Voltar
